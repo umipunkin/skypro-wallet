@@ -62,7 +62,7 @@
       <p v-if="error" class="error">{{ error }}</p>
 
       <button type="submit" class="submit-button" :disabled="isSubmitting">
-        {{ isSubmitting ? 'Добавление...' : 'Добавить расход' }}
+        {{ isSubmitting ? 'Добавление...' : 'Добавить новый расход' }}
       </button>
 
       <p v-if="successMessage" class="success">{{ successMessage }}</p>
@@ -265,7 +265,7 @@ const resetForm = () => {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px;
+  padding: 8px 20px;
   background: #f8fafc;
   border: 2px solid #e2e8f0;
   border-radius: 30px;

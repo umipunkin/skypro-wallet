@@ -100,6 +100,7 @@ const handleLogout = async () => {
   @media (max-width: 768px) {
     padding: 1rem;
     gap: 1rem;
+    min-width: 100%;
   }
 }
 

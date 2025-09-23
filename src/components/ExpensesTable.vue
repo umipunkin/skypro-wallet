@@ -31,11 +31,13 @@
       </tbody>
     </table>
   </div>
+  <NewExpenseModal/>
 </template>
 
 <script setup>
 import { computed, onMounted } from 'vue'
 import { expensesStore } from '@/store/store.js'
+import NewExpenseModal from './NewExpenseModal.vue'
 
 const categoryTranslations = {
   food: 'Еда',
@@ -112,16 +114,17 @@ const handleDeleteExpense = async (id) => {
 
     th,
     td {
-      padding: 12px 16px;
+      padding: 6px 16px;
       vertical-align: middle;
       text-align: left;
       white-space: nowrap;
+      font-size: 12px;
     }
 
     th {
-      background-color: #f7fafc;
-      color: #4a5568;
+      color: #999999;
       font-weight: 600;
+      size: 12px;
     }
 
     tr:last-child td {

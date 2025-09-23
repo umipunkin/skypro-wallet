@@ -2,9 +2,9 @@
   <div class="container">
     <h1>Мои расходы</h1>
 
-    <div class="add-button-container">
+    <!-- <div class="add-button-container">
       <button class="add-button" @click="showModal = true">+ Добавить расход</button>
-    </div>
+    </div> -->
 
     <div class="content-wrapper">
       <ExpensesTable />
