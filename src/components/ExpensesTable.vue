@@ -2,6 +2,7 @@
   <div class="table-container">
     <table>
       <thead>
+        <h2 style=" white-space: nowrap">Таблица расходов</h2>
         <tr>
           <th>Описание</th>
           <th>Категория</th>
