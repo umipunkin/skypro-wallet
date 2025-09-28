@@ -91,6 +91,7 @@ export const expensesStore = {
       if (response.status === 201) {
         console.log('Успешный ответ:', response.data)
 
+        // Обновляем локальное состояние
         if (response.data.transactions) {
           this.state.value = response.data.transactions.map((t) => ({
             id: t._id,

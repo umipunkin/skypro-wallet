@@ -9,3 +9,4 @@ import AnalysisComponent from '@/components/AnalysisComponent.vue'
 </script>
 
 <style lang="scss" scoped></style>
+ 

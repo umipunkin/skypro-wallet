@@ -1,8 +1,9 @@
 <template>
   <div class="table-container">
+    <h2 class="table-container__title">Таблица расходов</h2>
+
     <table>
       <thead>
-        <h2 style=" white-space: nowrap">Таблица расходов</h2>
         <tr>
           <th>Описание</th>
           <th>Категория</th>
@@ -16,7 +17,7 @@
           <td>{{ expense.description }}</td>
           <td>{{ expense.translatedCategory }}</td>
           <td>{{ expense.formattedDate }}</td>
-          <td>{{ expense.amount.toLocaleString('ru-RU') }} ₽</td>
+          <td>{{ expense.amount }} ₽</td>
           <td>
             <img
               src="../assets/icons/bag.svg"
@@ -32,7 +33,7 @@
       </tbody>
     </table>
   </div>
-  <NewExpenseModal/>
+  <NewExpenseModal />
 </template>
 
 <script setup>
@@ -70,6 +71,7 @@ const processedExpenses = computed(() => {
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .map((expense) => ({
       ...expense,
+      amount: expense.amount?.toLocaleString('ru-RU') ?? 0,
       translatedCategory: categoryTranslations[expense.category] || expense.category,
       formattedDate: formatDate(expense.date),
     }))
@@ -103,6 +105,10 @@ const handleDeleteExpense = async (id) => {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   padding: 20px;
   overflow-x: auto;
+
+  &__title {
+    white-space: nowrap;
+  }
 
   table {
     width: 100%;

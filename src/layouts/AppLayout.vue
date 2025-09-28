@@ -25,7 +25,7 @@ onMounted(async () => {
       return
     }
 
-    await expensesStore.getExpenses()
+    // await expensesStore.getExpenses()
   } catch (error) {
     console.error('Ошибка при инициализации:', error)
     router.push('/signin')
